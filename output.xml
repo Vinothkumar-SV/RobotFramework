@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-04-02T15:36:44.875914" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="D:\WorkSpace\VS_ROBOT\LearnRobot\tests\Login.robot">
+<test id="s1-t1" name="Create Lead Test - Guest Mode" line="8">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-02T15:36:45.412255" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001ED1191D940&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-02T15:36:45.405337" elapsed="0.007002"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--guest</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-04-02T15:36:45.412831" elapsed="0.000494"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:45.414183" level="INFO">Opening browser 'Chrome' to base url 'http://leaftaps.com/opentaps/control/main'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-02T15:36:45.413786" elapsed="6.276955"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-02T15:36:51.691365" elapsed="0.052669"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-02T15:36:51.751316" elapsed="0.402251"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:52.154492" level="INFO">Typing text 'DemoSalesManager' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>DemoSalesManager</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:52.154053" elapsed="0.190655"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:52.345889" level="INFO">Typing text 'crmsfa' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>crmsfa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:52.345286" elapsed="0.114148"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:52.460927" level="INFO">Clicking button 'class=decorativeSubmit'.</msg>
+<arg>class=decorativeSubmit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:52.460085" elapsed="0.244734"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>link=CRM/SFA</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-02T15:36:52.707192" elapsed="0.221866"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:52.930701" level="INFO">Clicking link 'CRM/SFA'.</msg>
+<arg>CRM/SFA</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:52.930223" elapsed="1.560641"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>link=Leads</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-02T15:36:54.492582" elapsed="0.101908"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:54.595444" level="INFO">Clicking link 'Leads'.</msg>
+<arg>Leads</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:54.595028" elapsed="0.840567"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>link=Create Lead</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-02T15:36:55.436172" elapsed="0.117405"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:55.554466" level="INFO">Clicking link 'Create Lead'.</msg>
+<arg>Create Lead</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:55.554094" elapsed="0.842799"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=createLeadForm_companyName</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-02T15:36:56.397521" elapsed="0.076514"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:56.475344" level="INFO">Typing text 'TestLeaf' into text field 'id=createLeadForm_companyName'.</msg>
+<arg>id=createLeadForm_companyName</arg>
+<arg>TestLeaf</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:56.474617" elapsed="0.161976"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:56.637475" level="INFO">Typing text 'John' into text field 'id=createLeadForm_firstName'.</msg>
+<arg>id=createLeadForm_firstName</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:56.637043" elapsed="0.135998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:56.774217" level="INFO">Typing text 'Doe' into text field 'id=createLeadForm_lastName'.</msg>
+<arg>id=createLeadForm_lastName</arg>
+<arg>Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:56.773927" elapsed="0.125736"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:36:56.901225" level="INFO">Clicking button 'name=submitButton'.</msg>
+<arg>name=submitButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-02T15:36:56.900728" elapsed="0.104108"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-02T15:37:00.781651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-02T15:37:00.781879" level="FAIL">Page should have contained text 'View Lead' but did not.</msg>
+<arg>View Lead</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-04-02T15:36:57.005517" elapsed="3.782560">Page should have contained text 'View Lead' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-04-02T15:37:00.788887" elapsed="0.000103"/>
+</kw>
+<status status="FAIL" start="2026-04-02T15:36:45.403797" elapsed="15.386518">Page should have contained text 'View Lead' but did not.</status>
+</test>
+<status status="FAIL" start="2026-04-02T15:36:44.878023" elapsed="15.914440"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="0" fail="1" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
